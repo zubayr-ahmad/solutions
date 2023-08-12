@@ -11,7 +11,6 @@ Welcome to the Python Programming Solutions Repository! This repository is dedic
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [Usage](#usage)
-- [Community](#community)
 - [License](#license)
 
 ## About
