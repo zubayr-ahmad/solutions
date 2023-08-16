@@ -1,13 +1,14 @@
 # https://leetcode.com/problems/search-a-2d-matrix/
-def getTargetRow(matrix,height,width):
+def getTargetRow(matrix,height,width,target):
     for i in range(height):
         if target <= matrix[i][width - 1]:
             return i
     return None
+
 def searchMatrix(matrix, target):
     height = len(matrix)
     width = len(matrix[0])
-    targetRow = getTargetRow(matrix,height,width)
+    targetRow = getTargetRow(matrix,height,width,target)
     if targetRow == None:
         return False
 
