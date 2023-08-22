@@ -11,8 +11,8 @@ def isSymmetric(root):
     if root is None:
         return True
     child01 = isSymmetric(root.left)
-    child02 = isSymmetric(root.right
-                          
+    child02 = isSymmetric(root.right)
+
     if child01 == child02:
         return True
 
