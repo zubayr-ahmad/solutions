@@ -4,15 +4,17 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        place = 0
-        for i in range(len(nums2)):
-            for j in range(len(nums1)):
-                if nums2[i] > nums1[place] and nums1[place] != 0:
-                    place = place + 1
-                    continue
-                break
-            nums1.insert(place,nums2[i])
-            nums1.pop(-1)
+        for i in range(n):  # nums2
+            for j in range(m):  # nums1
+                if nums2[i]<= nums1[j]:
+                    nums1.insert(j, nums2[i])
+                    m = m + 1
+                    nums1.pop()
+                    break
+            else:
+                nums1.insert(m, nums2[i])
+                m = m + 1
+                nums1.pop()
         return nums1
     
 sol = Solution()
@@ -20,4 +22,8 @@ nums1 = [-1,0,0,3,3,3,0,0,0]
 m = 6
 nums2 = [1,2,2]
 n = 3
+# nums1 = [1,2,3,0,0,0]
+# nums2 = [2,5,6]
+# m = 3
+# n = 3
 print(sol.merge(nums1,m,nums2,n))
