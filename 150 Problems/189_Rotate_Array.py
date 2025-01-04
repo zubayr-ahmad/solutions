@@ -10,17 +10,9 @@ class Solution(object):
         k = k % len(nums)
         if len(nums) == k:
             return 
-        stopage = len(nums) - k
-        sliced = nums[stopage:]
-        
-        place = len(nums) - 1
-        j = stopage - 1
-        while j >= 0:
-            nums[place] = nums[j]
-            j -= 1
-            place -= 1
-        
-        nums[:k] = sliced
+        nums.reverse()
+        nums[:k] = reversed(nums[:k])
+        nums[k:] = reversed(nums[k:])
         
 sol = Solution()
 nums = [1,2,3,4,5,6,7]
